@@ -22,7 +22,7 @@ Human Management API is a RESTful Web API built with ASP.NET Core, designed to m
 - ASP.NET Core, C#, Entity Framework Core, MySQL, Swagger, Dependency Injection, Middleware, DTO pattern.
 
 # Purpose:
-- This project showcases the ability to build a professional, maintainable, and scalable Web API, demonstrating practical knowledge of API architecture, error handling, validation, and database interaction.
+- This project showcases the ability to build a professional, maintainable, and scalable Web API, demonstrating practical knowledge of API architecture, error handling, validation, and database interaction. It also provides full data manipulation capabilities, allowing users to create, read, update, delete, and add records to the database.
 
 # Getting Started:
 - # Installation:
