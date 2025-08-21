@@ -1,4 +1,4 @@
-# HumanWebApiApp
+# WebHumanHub
 
 
 <img src="https://github.com/user-attachments/assets/ce23feed-8cea-4ed5-ac50-503f95db17e6" alt="Screenshot 1" width="800"/>
