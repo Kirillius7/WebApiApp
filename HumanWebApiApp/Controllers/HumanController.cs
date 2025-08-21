@@ -91,12 +91,11 @@ namespace HumanWebApiApp.Controllers
                 return BadRequest(new ErrorResponse()
                 {
                     Error = "Human object is null",
-                    Details = $"There is no data transferred to object: {human.GetType()}"
+                    Details = $"There is no data transferred to Human object"
                 });
             }
 
             var hn = humanRepository.AddNewHuman(human);
-
             var readHuman = new HumanReadDTO()
             {
                 id = hn.id,
