@@ -24,5 +24,16 @@ Human Management API is a RESTful Web API built with ASP.NET Core, designed to m
 # Purpose:
 - This project showcases the ability to build a professional, maintainable, and scalable Web API, demonstrating practical knowledge of API architecture, error handling, validation, and database interaction.
 
+# Getting Started:
+# Installation:
+- git clone https://github.com/yourname/project.git
+- cd project
+- dotnet restore
+- dotnet build
+- dotnet run
+# Requests:
+- https://localhost:7030/api/human/all - запит на виведення всіх людей із бази даних
+- https://localhost:7030/api/human/1 - запит на виведення людини із бази даних за індексом
+ 
 # Contacts:
 - https://www.linkedin.com/in/kyrylo-popov-ab160536a/
