@@ -9,15 +9,15 @@ Human Management API is a RESTful Web API built with ASP.NET Core, designed to m
 
 # Key Features:
 
-- CRUD Operations: Create, Read, Update, and Delete human records.
-- DTOs: Data Transfer Objects for safe and clear data handling between layers.
-- Repository Pattern: Encapsulates data access logic, keeping controllers clean.
-- Validation: Server-side validation using Data Annotations to ensure data integrity.
-- Middleware: Custom middleware for logging and centralized error handling.
-- Database Integration: MySQL database connected via Entity Framework Core.
-- Logging: Tracks actions and errors for easier debugging and monitoring.
-- Routing & Response Types: Explicit routes and ProducesResponseType for clear API documentation.
-- Swagger/OpenAPI: API documentation and testing through Swagger UI.
+- **CRUD Operations:** Create, Read, Update, and Delete human records.
+- **DTOs:** Data Transfer Objects for safe and clear data handling between layers.
+- **Repository Pattern:** Encapsulates data access logic, keeping controllers clean.
+- **Validation:** Server-side validation using Data Annotations to ensure data integrity.
+- **Middleware:** Custom middleware for logging and centralized error handling.
+- **Database Integration:** MySQL database connected via Entity Framework Core.
+- **Logging:** Tracks actions and errors for easier debugging and monitoring.
+- **Routing & Response Types:** Explicit routes and ProducesResponseType for clear API documentation.
+- **Swagger:** API documentation and testing through Swagger UI.
 
 # Technologies: 
 ASP.NET Core, C#, Entity Framework Core, MySQL, Swagger, Dependency Injection, Middleware, DTO pattern.
