@@ -1,7 +1,8 @@
 # HumanWebApiApp
 
-<img width="1920" height="954" alt="image" src="https://github.com/user-attachments/assets/ce23feed-8cea-4ed5-ac50-503f95db17e6" />
-<img width="1419" height="912" alt="image" src="https://github.com/user-attachments/assets/bafad45c-2291-4d5e-a2bc-b1fd8ef4e481" />
+
+<img src="https://github.com/user-attachments/assets/ce23feed-8cea-4ed5-ac50-503f95db17e6" alt="Screenshot 1" width="800"/>
+<img src="https://github.com/user-attachments/assets/bafad45c-2291-4d5e-a2bc-b1fd8ef4e481" alt="Screenshot 2" width="800"/>
 
 # About the project
 Human Management API is a RESTful Web API built with ASP.NET Core, designed to manage human entities with full CRUD functionality. The project demonstrates best practices in modern API development, including layered architecture, dependency injection, data validation, and structured error handling.
