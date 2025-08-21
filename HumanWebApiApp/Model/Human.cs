@@ -21,11 +21,11 @@ namespace HumanWebApiApp.Model
         [StringLength(maximumLength: 15, MinimumLength = 2, ErrorMessage = "Range")]
         public string citizenship { get; set; }
 
-        [Required(ErrorMessage = "First Name is required")]
+        [Required(ErrorMessage = "EmailAddress is required")]
         [EmailAddress]
         public string email { get; set; }
 
-        [Required(ErrorMessage = "First Name is required")]
+        [Required(ErrorMessage = "Password is required")]
         [PasswordPropertyText]
         public string password { get; set; }
     }

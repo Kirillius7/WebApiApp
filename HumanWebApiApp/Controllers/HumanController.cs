@@ -25,7 +25,6 @@ namespace HumanWebApiApp.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<IEnumerable<HumanReadDTO>> GetAllHumans()
         {
-            logger.LogInformation("GetAllHumans activated!");
             var hmns = humanRepository.GetAllHumans();
             var readHmns = hmns.Select(x => new HumanReadDTO()
             {
@@ -55,6 +54,7 @@ namespace HumanWebApiApp.Controllers
                     Details = "ID should be bigger than 0!"
                 });
             }
+
             var hn = humanRepository.GetByIdHuman(id);
             if (hn is null)
             {
@@ -65,6 +65,7 @@ namespace HumanWebApiApp.Controllers
                     Details = $"There is no information about a person with id: {id}"
                 });
             }
+
             var hnRead = new HumanReadDTO()
             {
                 id = hn.id,
@@ -84,13 +85,15 @@ namespace HumanWebApiApp.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<HumanReadDTO> AddNewHuman([FromBody] HumanCreateDTO human)
         {
-
             if (human is null)
+            {
+                logger.LogError("AddNewHuman error!");
                 return BadRequest(new ErrorResponse()
                 {
                     Error = "Human object is null",
                     Details = $"There is no data transferred to object: {human.GetType()}"
                 });
+            }
 
             var hn = humanRepository.AddNewHuman(human);
 
@@ -115,19 +118,23 @@ namespace HumanWebApiApp.Controllers
         public IActionResult DeleteByIdHuman([FromRoute] int id)
         {
             if (id <= 0)
+            {
+                logger.LogError("DeleteByIdHuman error!");
                 return BadRequest(new ErrorResponse()
                 {
                     Error = "Wrong ID input",
                     Details = "ID should be bigger than 0!"
                 });
-
+            }
             if (!humanRepository.DeleteByIdHuman(id))
+            {
+                logger.LogWarning("DeleteByIdHuman warning!");
                 return NotFound(new ErrorResponse()
                 {
                     Error = "No person was found",
                     Details = $"There is no information about a person with id: {id}"
                 });
-
+            }
             return NoContent();
         }
 
@@ -140,12 +147,14 @@ namespace HumanWebApiApp.Controllers
         public ActionResult<HumanUpdateDTO> UpdateHumanById([FromRoute] int id, [FromBody] HumanUpdateDTO newHuman)
         {
             if (id <= 0)
+            {
+                logger.LogError("UpdateHumanById error!");
                 return BadRequest(new ErrorResponse()
                 {
                     Error = "Wrong ID input",
                     Details = "ID should be bigger than 0!"
                 });
-
+            }
             var personHuman = new Human()
             {
                 firstName = newHuman.firstName,
@@ -155,13 +164,15 @@ namespace HumanWebApiApp.Controllers
 
             var person = humanRepository.UpdateHumanById(id, personHuman);
 
-            if (person is null) 
+            if (person is null)
+            {
+                logger.LogWarning("UpdateHumanById warning!");
                 return NotFound(new ErrorResponse()
                 {
                     Error = "No person was found",
                     Details = $"There is no information about a person with id: {id}"
                 });
-
+            }
             var personRead = new HumanReadDTO()
             {
                 id = person.id,
