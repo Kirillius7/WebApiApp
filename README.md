@@ -7,7 +7,7 @@
 # About the project
 Human Management API is a RESTful Web API built with ASP.NET Core, designed to manage human entities with full CRUD functionality. The project demonstrates best practices in modern API development, including layered architecture, dependency injection, data validation, and structured error handling.
 
-# Key Features:
+# Key Features
 
 - **CRUD Operations:** Create, Read, Update, and Delete human records.
 - **DTOs:** Data Transfer Objects for safe and clear data handling between layers.
@@ -19,7 +19,7 @@ Human Management API is a RESTful Web API built with ASP.NET Core, designed to m
 - **Routing & Response Types:** Explicit routes and ProducesResponseType for clear API documentation.
 - **Swagger:** API documentation and testing through Swagger UI.
 
-# Technologies: 
+# Technologies 
 ASP.NET Core, C#, Entity Framework Core, MySQL, Swagger, Dependency Injection, Middleware, DTO pattern.
 
 # Purpose:
@@ -36,5 +36,5 @@ This project showcases the ability to build a professional, maintainable, and sc
 - GET https://localhost:7030/api/human/all - запит на виведення всіх людей із бази даних
 - GET https://localhost:7030/api/human/1 - запит на виведення людини із бази даних за індексом
  
-# Contacts:
+# Contacts
 https://www.linkedin.com/in/kyrylo-popov-ab160536a/
